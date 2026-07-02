@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大江観光案内AI アンケート</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="page-header">
+    <h1>大江観光案内AI</h1>
+
+    <div class="top-icon">
+      <img src="header/icon.png" alt="ヘッダーアイコン">
+    </div>
+  </header>
+
+  <main class="app questionnaire-page">
+    <h1>案内のための質問</h1>
+
+    <form id="questionnaireForm" class="questionnaire-form">
+      <section class="question-block">
+        <h2>1. 大江で一番気になるものは何ですか？</h2>
+        <div class="option-grid">
+          <label>
+            <input type="radio" name="interest" value="鬼伝説" required>
+            <span>鬼伝説</span>
+          </label>
+          <label>
+            <input type="radio" name="interest" value="元伊勢・神社">
+            <span>元伊勢・神社</span>
+          </label>
+          <label>
+            <input type="radio" name="interest" value="自然・景色">
+            <span>自然・景色</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="question-block">
+        <h2>2. 大江には初めて来ましたか？</h2>
+        <div class="option-grid">
+          <label>
+            <input type="radio" name="visitExperience" value="初めて" required>
+            <span>初めて</span>
+          </label>
+          <label>
+            <input type="radio" name="visitExperience" value="何度か来た">
+            <span>何度か来た</span>
+          </label>
+          <label>
+            <input type="radio" name="visitExperience" value="地元・近くに住んでいる">
+            <span>地元・近くに住んでいる</span>
+          </label>
+        </div>
+      </section>
+
+      <section class="question-block">
+        <h2>3. 観光に使える時間はどれくらいですか？</h2>
+        <div class="time-control">
+          <input id="tourTime" type="range" name="tourTime" min="1" max="180" step="1" value="60">
+          <output id="tourTimeOutput" for="tourTime">60分</output>
+        </div>
+      </section>
+
+      <section class="question-block">
+        <h2>4. どんな案内が好みですか？</h2>
+        <div class="option-grid">
+          <label>
+            <input type="radio" name="guideStyle" value="短く分かりやすく" required>
+            <span>短く分かりやすく</span>
+          </label>
+          <label>
+            <input type="radio" name="guideStyle" value="歴史を詳しく">
+            <span>歴史を詳しく</span>
+          </label>
+          <label>
+            <input type="radio" name="guideStyle" value="面白い話を多めに">
+            <span>面白い話を多めに</span>
+          </label>
+        </div>
+      </section>
+
+      <button type="submit" class="call-button">案内を開始する</button>
+    </form>
+  </main>
+
+  <script src="questionnaire.js"></script>
+</body>
+</html>

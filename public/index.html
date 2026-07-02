@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>大江観光案内AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- body右上：キャラクター切り替え用アイコン -->
+  <button id="characterSwitchButton" class="character-switch-button">
+    <img id="characterSwitchIcon" src="iwato/switch_icon.png" alt="キャラクター切り替え">
+  </button>
+
+  <header class="page-header">
+    <h1 id="pageTitle">大江観光案内AI</h1>
+
+    <!-- ヘッダー内の固定アイコン -->
+    <div class="top-icon">
+      <img src="header/icon.png" alt="ヘッダーアイコン">
+    </div>
+  </header>
+
+  <div class="app guide-page">
+    <h1 id="characterTitle">くろおにくんを呼び出す</h1>
+
+    <section class="profile-summary" aria-label="アンケート回答">
+      <div>
+        <p class="profile-label">案内設定</p>
+        <p id="visitorProfileSummary">アンケート回答を読み込み中です。</p>
+      </div>
+      <a href="questionnaire.html" class="profile-edit-link">変更</a>
+    </section>
+
+    <section class="tour-timer" aria-label="観光案内タイマー">
+      <p class="timer-label">観光案内 残り時間</p>
+      <p id="tourTimerText" class="timer-time">--:--</p>
+    </section>
+
+    <div class="media-box" id="mediaBox">
+      <img id="thumbnail" src="kurooni/seisi.jpg" alt="キャラクター画像">
+      <audio id="startVoice" src="kurooni/start_voice.mp3"></audio>
+      <audio id="stopAlertAudio" src="stop_alart.mp3" preload="auto"></audio>
+      <audio id="stopCallAudio" src="stop_call.mp3" preload="auto"></audio>
+      <video id="video" src="kurooni/kutipaku.mp4" loop muted playsinline></video>
+    </div>
+
+    <button id="callButton" class="call-button">呼び出し</button>
+
+    <p id="status" class="dev-status">
+[待機]
+処理内容: 初回呼び出し待ち
+現在キャラクター: くろおにくん
+AI接続: 接続OFF
+録音状態: 録音OFF
+AI状態: AI待機中
+動画状態: 動画OFF
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
