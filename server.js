@@ -6,7 +6,7 @@ import path from "path";
 dotenv.config();
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // publicフォルダを公開。最初にアンケートページを表示する。
 app.use(express.static("public", { index: "questionnaire.html" }));
@@ -98,6 +98,6 @@ app.post("/session", async (req, res) => {
   }
 });
 
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`起動しました: http://localhost:${PORT}`);
 });
